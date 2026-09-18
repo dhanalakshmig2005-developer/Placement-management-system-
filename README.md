@@ -12,7 +12,7 @@ The system provides separate functionalities for:
 - 🏢 Companies — Manage job openings and review student applications.
 - ⚙️ Administrators — Manage student details, company information, job postings, and placement records.
 
-The project uses Java, JDBC, MySQL, HTML, CSS, and JavaScript.
+Technologies Used: Java, JDBC, MySQL, HTML, CSS, and JavaScript.
 
 🚀 Features
 
@@ -77,7 +77,7 @@ PlacementManagementSystem/
 ├── README.md
 └── .gitignore
 
-Layer Description:
+Layer Description
 
 - Controller: Handles user requests and application flow.
 - DAO: Performs database operations using JDBC.
@@ -86,7 +86,7 @@ Layer Description:
 - Repository: Organizes data access functionality.
 - Util: Contains database connection and utility classes.
 
-Note: Adjust the folder structure according to your actual project files.
+«Note: Adjust the folder structure according to your actual project files.»
 
 🗄️ Database Design
 
@@ -103,17 +103,17 @@ Table| Description
 Basic Relationship
 
 Students
-   |
-   | Applies
-   v
+   │
+   │ Applies
+   ▼
 Applications
-   |
-   | Belongs to
-   v
+   │
+   │ Belongs to
+   ▼
 Jobs
-   |
-   | Posted by
-   v
+   │
+   │ Posted by
+   ▼
 Companies
 
 ⚙️ Getting Started
@@ -130,7 +130,7 @@ Make sure the following software is installed:
 
 1️⃣ Clone the Repository
 
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/dhanalakshmig2005-developer/PlacementManagementSystem.git
 cd PlacementManagementSystem
 
 2️⃣ Open the Project
@@ -153,7 +153,7 @@ USE placement_db;
 
 4️⃣ Create Database Tables
 
-Execute the SQL script provided in the project.
+Execute the SQL script provided in the project:
 
 sql/schema.sql
 
@@ -169,7 +169,7 @@ db.url=jdbc:mysql://localhost:3306/placement_db
 db.user=root
 db.password=your_password
 
-⚠️ Security Note: Do not upload database passwords, API keys, or other sensitive credentials to GitHub.
+⚠️ Security Note: Do not upload database passwords, API keys, or other sensitive credentials to GitHub. Keep configuration files containing secrets out of version control.
 
 6️⃣ Add MySQL Connector/J
 
@@ -189,8 +189,6 @@ db.password=your_password
 
 Screenshots of the application interface can be added here.
 
-Example:
-
 - Student Login Page
 - Student Dashboard
 - Company Dashboard
@@ -198,8 +196,6 @@ Example:
 - Job Application Page
 
 🎯 Project Objectives
-
-The main objectives of the Placement Management System are:
 
 - Simplify the college placement process.
 - Reduce manual placement management.
@@ -209,8 +205,6 @@ The main objectives of the Placement Management System are:
 - Improve communication between students, companies, and placement officers.
 
 🔮 Future Enhancements
-
-The project can be enhanced with the following features:
 
 - 📄 Resume upload and management
 - 📧 Email notifications for placement updates
@@ -228,7 +222,7 @@ Dhanalakshmi G
 
 B.E. Computer Science and Engineering
 
-GitHub: "Dhanalakshmi G" (https://github.com/dhanalakshmig2005-developer)
+GitHub: "dhanalakshmig2005-developer" (https://github.com/dhanalakshmig2005-developer)
 
 📄 License
 
