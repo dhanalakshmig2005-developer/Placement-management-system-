@@ -1,309 +1,237 @@
-# 🎓 SmartPlacementSystem
+🎓 Placement Management System
 
-A **Java-based Smart Placement Management System** that connects students, companies, and administrators through a streamlined platform for managing job opportunities, applications, and recruitment.
+A Java-based Placement Management System that connects students, companies, and administrators through a centralized platform for managing job opportunities, applications, and recruitment activities.
 
-----
+📌 Overview
 
-## 📌 Overview
+The Placement Management System is a web-based application designed to simplify and organize the college campus recruitment process.
 
-**SmartPlacementSystem** is a full-stack placement management application designed to simplify the campus recruitment process.
+The system provides separate functionalities for:
 
-The system provides separate functionality for:
+- 👨‍🎓 Students — Browse job opportunities, check eligibility, and apply for jobs.
+- 🏢 Companies — Manage job openings and review student applications.
+- ⚙️ Administrators — Manage student details, company information, job postings, and placement records.
 
-* 👨‍🎓 **Students** — discover and apply for job opportunities
-* 🏢 **Companies** — post jobs and manage applicants
-* ⚙️ **Administrators** — manage students, companies, jobs, and applications
+Technologies Used: Java, JDBC, MySQL, HTML, CSS, and JavaScript.
 
-The project is built using **Java, JDBC, MySQL, HTML, CSS, and JavaScript**.
+🚀 Features
 
----
+👨‍🎓 Student Module
 
-## 🚀 Features
+- Student registration and login
+- View and update student profile
+- Browse available job opportunities
+- View job details and eligibility criteria
+- Apply for suitable job openings
+- Track application status
 
-### 👨‍🎓 Student
+🏢 Company Module
 
-* 📝 Student registration and login
-* 🔍 Browse available job opportunities
-* 📄 View job details
-* 📩 Apply for jobs
-* 📊 Track application status
-* 👤 Manage student information
+- Company registration and login
+- Create and manage job postings
+- View student applications
+- Review applicant details
+- Update recruitment and application status
 
-### 🏢 Company
+⚙️ Admin Module
 
-* 📝 Company registration and login
-* 📢 Create and publish job openings
-* 👀 View student applications
-* 🔎 Review applicant information
-* 🛠️ Manage recruitment and application status
+- View and manage student details
+- Manage company information
+- Add, update, and delete job postings
+- Monitor student applications
+- Manage placement records
+- Oversee placement activities
 
-### ⚙️ Admin
+🛠️ Tech Stack
 
-* 👨‍🎓 View and manage students
-* 🏢 View and manage companies
-* 💼 Manage job postings
-* 📩 Monitor applications
-* 🔍 Oversee the complete placement process
+Technology| Purpose
+☕ Java| Backend logic and application functionality
+🔗 JDBC| Database connectivity
+🛢️ MySQL| Database storage and management
+🌐 HTML5| Web page structure
+🎨 CSS3| UI styling and layout
+⚡ JavaScript| Client-side interactivity
+💻 Eclipse IDE / IntelliJ IDEA| Development environment
 
----
+🏗️ Project Architecture
 
-## 🛠️ Tech Stack
+The project follows a layered architecture to organize database operations, business logic, and application functionality.
 
-| Technology           | Purpose                                     |
-| -------------------- | ------------------------------------------- |
-| ☕ **Java**           | Backend logic and application functionality |
-| 🔗 **JDBC**          | Database connectivity                       |
-| 🛢️ **MySQL**        | Data storage and management                 |
-| 🌐 **HTML5**         | Web page structure                          |
-| 🎨 **CSS3**          | UI styling and layout                       |
-| ⚡ **JavaScript**     | Client-side interactivity                   |
-| 💻 **IntelliJ IDEA** | Development environment                     |
-
----
-
-## 🏗️ Architecture
-
-The project follows a layered structure to keep database operations, business logic, models, and controllers organized.
-
-```text
-SmartPlacementSystem/
+PlacementManagementSystem/
 │
 ├── src/
-│   ├── controller/       # Handles application requests
-│   ├── dao/              # Database access using JDBC
-│   ├── model/            # POJO / entity classes
-│   ├── service/          # Business logic
-│   └── util/             # Utilities and database configuration
+│   ├── controller/
+│   ├── dao/
+│   ├── model/
+│   ├── service/
+│   ├── repository/
+│   └── util/
 │
-├── view/
-│   ├── html/             # HTML pages
-│   ├── css/              # Stylesheets
-│   ├── js/               # JavaScript files
-│   └── images/           # Images and other assets
-│
+├── html/
+├── css/
+├── js/
 ├── sql/
-│   └── schema.sql        # Database schema
+│   └── schema.sql
 │
 ├── lib/
-│   └── mysql-connector/  # MySQL JDBC driver
-│
-└── README.md
-```
+├── README.md
+└── .gitignore
 
----
+Layer Description
 
-## 🗄️ Database Design
+- Controller: Handles user requests and application flow.
+- DAO: Performs database operations using JDBC.
+- Model: Stores student, company, job, and application data.
+- Service: Contains business logic and validation.
+- Repository: Organizes data access functionality.
+- Util: Contains database connection and utility classes.
 
-The application uses **MySQL** as its relational database.
+«Note: Adjust the folder structure according to your actual project files.»
 
-### Main Tables
+🗄️ Database Design
 
-| Table          | Description                                      |
-| -------------- | ------------------------------------------------ |
-| `students`     | Stores student information                       |
-| `companies`    | Stores company information                       |
-| `jobs`         | Stores job and placement opportunities           |
-| `applications` | Stores student job applications and their status |
+The application uses MySQL as its relational database to store and manage placement-related information.
 
-### Basic Relationship
+Main Tables
 
-```text
+Table| Description
+"students"| Stores student information
+"companies"| Stores company details
+"jobs"| Stores job and placement opportunities
+"applications"| Stores student job applications and their status
+
+Basic Relationship
+
 Students
    │
-   │ applies
+   │ Applies
    ▼
 Applications
    │
-   │ belongs to
+   │ Belongs to
    ▼
 Jobs
    │
-   │ posted by
+   │ Posted by
    ▼
 Companies
-```
 
----
+⚙️ Getting Started
 
-## ⚙️ Getting Started
+Prerequisites
 
-### Prerequisites
+Make sure the following software is installed:
 
-Make sure the following are installed:
+- ☕ Java JDK
+- 🛢️ MySQL Server
+- 💻 Eclipse IDE or IntelliJ IDEA
+- 🔗 MySQL Connector/J
+- 🌐 A modern web browser
 
-* ☕ Java JDK
-* 🛢️ MySQL Server
-* 💻 IntelliJ IDEA
-* 🔗 MySQL Connector/J
-* 🌐 A modern web browser
+1️⃣ Clone the Repository
 
----
+git clone https://github.com/dhanalakshmig2005-developer/PlacementManagementSystem.git
+cd PlacementManagementSystem
 
-### 1️⃣ Clone the Repository
+2️⃣ Open the Project
 
-```bash
-git clone https://github.com/jiteshkhatri11/SmartPlacementSystem.git
-cd SmartPlacementSystem
-```
+1. Open Eclipse IDE or IntelliJ IDEA.
+2. Select Open Project or Import Project.
+3. Choose the project folder.
+4. Configure the Java JDK.
+5. Add the required project dependencies.
 
----
-
-### 2️⃣ Open in IntelliJ IDEA
-
-1. Open **IntelliJ IDEA**
-2. Select **Open Project**
-3. Choose the cloned `SmartPlacementSystem` directory
-4. Allow IntelliJ to configure the project
-
----
-
-### 3️⃣ Configure MySQL
+3️⃣ Configure MySQL
 
 Create the database:
 
-```sql
 CREATE DATABASE placement_db;
-```
 
 Select the database:
 
-```sql
 USE placement_db;
-```
 
----
+4️⃣ Create Database Tables
 
-### 4️⃣ Run the Database Schema
+Execute the SQL script provided in the project:
 
-Execute the SQL file:
-
-```text
 sql/schema.sql
-```
 
-This will create the required tables and database structure.
+This creates the required tables for managing students, companies, jobs, and applications.
 
----
+5️⃣ Configure Database Connection
 
-### 5️⃣ Configure Database Connection
+Configure the database connection in your project.
 
-Create:
+Example:
 
-```text
-src/util/db.properties
-```
-
-Add your MySQL configuration:
-
-```properties
 db.url=jdbc:mysql://localhost:3306/placement_db
 db.user=root
 db.password=your_password
-```
 
-> ⚠️ Do not commit passwords or other sensitive credentials to GitHub.
+⚠️ Security Note: Do not upload database passwords, API keys, or other sensitive credentials to GitHub. Keep configuration files containing secrets out of version control.
 
-For local development, consider adding `db.properties` to `.gitignore`.
+6️⃣ Add MySQL Connector/J
 
----
+1. Download MySQL Connector/J.
+2. Add the connector JAR file to your project.
+3. Configure it in your IDE's project dependencies.
 
-### 6️⃣ Add MySQL Connector/J
+7️⃣ Run the Application
 
-Download **MySQL Connector/J** and place the JAR inside:
+1. Start the MySQL server.
+2. Verify the database connection.
+3. Open the project in your IDE.
+4. Run the main Java class.
+5. Open the frontend HTML file in your browser, if applicable.
 
-```text
-lib/
-```
+📸 Screenshots
 
-Then add the JAR to the project's dependencies in IntelliJ IDEA.
+Screenshots of the application interface can be added here.
 
----
+- Student Login Page
+- Student Dashboard
+- Company Dashboard
+- Admin Dashboard
+- Job Application Page
 
-### 7️⃣ Run the Application
+🎯 Project Objectives
 
-Open the main HTML entry point:
+- Simplify the college placement process.
+- Reduce manual placement management.
+- Provide students with easy access to job opportunities.
+- Help companies manage recruitment activities.
+- Enable administrators to maintain placement records efficiently.
+- Improve communication between students, companies, and placement officers.
 
-```text
-view/html/index.html
-```
+🔮 Future Enhancements
 
-Run it using your preferred browser.
+- 📄 Resume upload and management
+- 📧 Email notifications for placement updates
+- 📊 Admin dashboard with analytics
+- 🔐 Improved authentication and authorization
+- 🔑 Secure password hashing
+- 🔎 Advanced job search and filtering
+- 📱 Responsive and mobile-friendly design
+- 🌐 REST API integration
+- ☁️ Cloud deployment
 
----
+👨‍💻 Author
 
-## 📸 Screenshots
+Dhanalakshmi G
 
-Screenshots and UI demonstrations will be added soon.
+B.E. Computer Science and Engineering
 
-> 🚧 **Coming Soon**
+GitHub: "dhanalakshmig2005-developer" (https://github.com/dhanalakshmig2005-developer)
 
----
+📄 License
 
-## 🔮 Future Improvements
+This project is developed for educational and academic purposes.
 
-The project can be extended with several features:
+⭐ Project Goals
 
-* 📄 Resume upload and management
-* 📧 Email notifications
-* 📊 Admin dashboard and analytics
-* 🔐 Improved authentication and authorization
-* 🔑 Password hashing and security improvements
-* 🔎 Advanced job search and filtering
-* 📱 Responsive/mobile-friendly UI
-* 🌐 REST API integration
-* 🏗️ Migration from JDBC-based architecture to **Spring Boot**
-* 🗃️ Improved database validation and transaction management
-* ☁️ Cloud deployment
-
----
-
-## 🎯 Project Goals
-
-The main objectives of SmartPlacementSystem are to:
-
-* Simplify the student placement process
-* Reduce manual placement management
-* Provide companies with an organized applicant-management system
-* Give administrators centralized control
-* Create a foundation for a scalable recruitment platform
+The Placement Management System aims to connect students with career opportunities, support companies in recruitment, and help colleges manage placement activities in an organized and efficient way.
 
 ---
 
-## 👨‍💻 Author
-
-### Jitesh Khatri
-
-GitHub: **jiteshkhatri11**
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more information.
-
----
-
-## ⭐ Support
-
-If you find this project useful:
-
-⭐ **Star** the repository
-🍴 **Fork** the repository
-🛠️ **Contribute** improvements
-🐛 **Report** issues
-
----
-
-## 📌 Project Status
-
-**🚧 Active Development**
-
-New features, UI improvements, security enhancements, and documentation will be added over time.
-
----
-
-### ⭐ SmartPlacementSystem
-
-> **Connecting students with opportunities and companies with talent.**
+⭐ Placement Management System — Connecting students with opportunities and companies with talent.
